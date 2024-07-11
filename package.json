@@ -4,15 +4,25 @@
   "private": true,
   "scripts": {
     "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
+    "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@gitbeaker/rest": "^40.1.1",
+    "@octokit/rest": "^21.0.0",
+    "@tinacms/datalayer": "^1.2.36",
+    "@tinacms/graphql": "^1.4.36",
+    "js-base64": "^3.7.7",
+    "mongodb": "^6.8.0",
+    "mongodb-level": "^0.0.4",
     "next": "14.2.5",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
-    "tinacms": "^1.6.5"
+    "tinacms": "^1.6.5",
+    "tinacms-authjs": "^2.0.5"
   },
   "devDependencies": {
     "@tinacms/cli": "^1.5.47",
