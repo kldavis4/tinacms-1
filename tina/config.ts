@@ -1,3 +1,5 @@
+// tina/config.ts
+
 import { defineConfig, LocalAuthProvider } from "tinacms";
 import {
   TinaUserCollection,
@@ -5,8 +7,6 @@ import {
 } from "tinacms-authjs/dist/tinacms";
 
 export const isLocal = process.env.TINA_PUBLIC_IS_LOCAL == "true";
-
-console.log("local?: ", process.env.MONGODB_URI);
 
 // Your hosting provider likely exposes this as an environment variable
 export const branch =
