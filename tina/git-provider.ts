@@ -17,28 +17,7 @@ const gitbeaker = new Gitlab({
   host: host,
 });
 
-export interface GitlabProviderOptions {
-  host: string;
-  repo: string;
-  token: string;
-  branch: string;
-  commitMessage?: string;
-  rootPath?: string;
-}
-
 export class MyGitlabProvider implements GitProvider {
-  repo: string;
-  branch: string;
-  rootPath?: string;
-  commitMessage?: string;
-
-  constructor(args: GitlabProviderOptions) {
-    this.repo = args.repo;
-    this.branch = args.branch;
-    this.commitMessage = args.commitMessage;
-    this.rootPath = args.rootPath;
-  }
-
   async onPut(key: string, value: string) {
     let fileExists = false;
     try {
