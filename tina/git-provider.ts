@@ -18,7 +18,6 @@ const gitbeaker = new Gitlab({
 });
 
 export interface GitlabProviderOptions {
-  owner: string;
   host: string;
   repo: string;
   token: string;
@@ -28,14 +27,12 @@ export interface GitlabProviderOptions {
 }
 
 export class MyGitlabProvider implements GitProvider {
-  owner: string;
   repo: string;
   branch: string;
   rootPath?: string;
   commitMessage?: string;
 
   constructor(args: GitlabProviderOptions) {
-    this.owner = args.owner;
     this.repo = args.repo;
     this.branch = args.branch;
     this.commitMessage = args.commitMessage;

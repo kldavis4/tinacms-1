@@ -10,7 +10,7 @@ export const isLocal = process.env.TINA_PUBLIC_IS_LOCAL == "true";
 
 // Your hosting provider likely exposes this as an environment variable
 export const branch =
-  process.env.GITHUB_BRANCH ||
+  process.env.GITLAB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
   "main";
