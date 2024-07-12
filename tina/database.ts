@@ -11,8 +11,9 @@ export default isLocal
       gitProvider: new MyGitlabProvider(),
       databaseAdapter: new MongodbLevel<string, Record<string, any>>({
         // If you are not using branches you could pass a static collection name. ie: "tinacms"
-        collectionName: `tinacms-${branch}`,
+        collectionName: `tinacms`,
         dbName: "tinacms",
         mongoUri: process.env.MONGODB_URI as string,
       }),
+      namespace: branch
     });
