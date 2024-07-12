@@ -4,7 +4,10 @@
       "name": "Tri Denda",
       "email": "tridenda.nk@gmail.com ",
       "username": "tridenda",
-      "password": "tridenda"
+      "password": {
+        "value": "tridenda",
+        "passwordChangeRequired": true
+      }
     }
   ]
 }
